@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @thought.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @thought.description %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= time_format(@thought.start_date) %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= time_format(@thought.end_date) %>
+</p>
+
+<p>
+  <strong>Venue:</strong>
+  <%= @thought.venue %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @thought.location %>
+</p>
+
+<%= link_to 'Edit', edit_thought_path(@thought) %> |
+<%= link_to 'Back', thoughts_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>All Thoughts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th>Venue</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @thoughts.each do |thought| %>
+      <tr>
+        <td><%= thought.title %></td>
+        <td><%= thought.description %></td>
+        <td><%= thought.start_date %></td>
+        <td><%= thought.end_date %></td>
+        <td><%= thought.venue %></td>
+        <td><%= thought.location %></td>
+        <td><%= link_to 'View', thought %></td>
+        <td><%= link_to 'Edit', edit_thought_path(thought) %></td>
+        <td><%= link_to 'Destroy', thought, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Thought', new_thought_path %>
