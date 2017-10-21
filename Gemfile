@@ -31,6 +31,8 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
 gem 'font-awesome-sass', '~> 4.7'
 
+gem 'awesome_print', '~> 1.8'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

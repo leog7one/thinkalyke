@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171020165123) do
+ActiveRecord::Schema.define(version: 20171021001613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,10 @@ ActiveRecord::Schema.define(version: 20171020165123) do
     t.string   "location"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "thinker_id"
   end
 
+  add_index "thoughts", ["thinker_id"], name: "index_thoughts_on_thinker_id", using: :btree
+
+  add_foreign_key "thoughts", "thinkers"
 end
