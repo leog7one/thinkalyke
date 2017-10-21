@@ -5,4 +5,8 @@ class Thinker < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :thoughts, dependent: :destroy
+
+  def to_s
+  	"#{email}"
+  end
 end

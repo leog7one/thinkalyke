@@ -27,6 +27,7 @@ class ThoughtsController < ApplicationController
   # POST /thoughts.json
   def create
     @thought = Thought.new(thought_params)
+    @thought.thinker = current_thinker
 
     respond_to do |format|
       if @thought.save

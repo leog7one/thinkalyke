@@ -13,6 +13,9 @@
   line-height: 22px;
 }
 
+.thought-image {
+  @extend .img-responsive
+}
 
 .thoughts {
   border-bottom: 1px solid #eaeaea;
