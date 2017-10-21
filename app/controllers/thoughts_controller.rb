@@ -6,7 +6,7 @@ class ThoughtsController < ApplicationController
   # GET /thoughts
   # GET /thoughts.json
   def index
-    @thoughts = Thought.all
+    @thoughts = Thought.order(created_at: :desc)
   end
 
   # GET /thoughts/1
