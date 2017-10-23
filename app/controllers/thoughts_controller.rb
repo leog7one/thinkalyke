@@ -12,7 +12,7 @@ class ThoughtsController < ApplicationController
   # GET /thoughts/1
   # GET /thoughts/1.json
   def show
-   
+
   end
 
   # GET /thoughts/new
@@ -78,8 +78,9 @@ class ThoughtsController < ApplicationController
     end
 
     def authorize_owner
+      :authenticate_thinker!
 
-      unless @thought.thinker == current_thinker
+      unless @thought.thinker == current_thinker || current_thinker.admin?
         flash[:alert] = "You do not have permission to perform this action"
         redirect_to thoughts_path
       end
