@@ -93,6 +93,33 @@ a.delete {
   }
 }
 
+span.upcoming, 
+span.past {
+  color:#000;
+  font-weight: bold;
+  border-radius: 3px;
+
+  &:before {
+  font-family: "FontAwesome";
+  padding: 1.5em
+  }
+}
+
+span.upcoming {
+  background-color: #12e52a;
+
+  &:before {
+  @extend .fa-check;
+  }
+}
+
+span.past {
+  background-color: #e51212;
+
+  &:before {
+  @extend .fa-close;
+  }
+}
 
 pre {
   background-color: #eee;
