@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    root 'application#index'
+  end
+
   devise_for :thinkers, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
   
   root 'thoughts#index'
