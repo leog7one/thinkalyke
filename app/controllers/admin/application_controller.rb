@@ -5,6 +5,7 @@ class Admin::ApplicationController < ApplicationController
   def index
   	@thinkers = Thinker.all
   	@thoughts = Thought.all
+  	@categories = Category.all
   end
 
 
