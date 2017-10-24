@@ -3,6 +3,8 @@ class Admin::ApplicationController < ApplicationController
 	before_action :authorize_admin!
 
   def index
+  	@thinkers = Thinker.all
+  	@thoughts = Thought.all
   end
 
 

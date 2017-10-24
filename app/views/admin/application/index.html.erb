@@ -1,2 +1,36 @@
-<h1>Admin::Application#index</h1>
-<p>Find me in app/views/admin/application/index.html.erb</p>
+<div class="row">
+	<div class="col-sm-3 admin">
+		<div class="admin-sidebar">
+			<div class="thinker-panel">
+			</div>
+		</div>
+		<ul class="admin-menu">
+			<li class="text-uppercase text-center header">Admin Panel</li>
+		</ul>
+
+		 <li>
+        <%= link_to thoughts_path do %>
+          <%= fa_icon "calendar" %>
+          <span>Thoughts</span>
+          <span class="label label-warning pull-right"><%= @thoughts.count %></span>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to admin_thinkers_path do %>
+          <%= fa_icon "user-circle-o" %>
+          <span>Thinkers</span>
+          <span class="label label-warning pull-right"><%= @thinkers.count %></span>
+        <% end %>
+      </li>
+	</div>
+
+	<div class="col-sm-9">
+		<header>
+			<h1>Dashboard <small>Admin Panel</small></h1>
+		</header>
+
+
+		<h4>Welcome to the Admin Panel</h4>
+	</div>
+
+</div>
