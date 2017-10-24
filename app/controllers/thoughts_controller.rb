@@ -7,6 +7,7 @@ class ThoughtsController < ApplicationController
   # GET /thoughts.json
   def index
     @thoughts = Thought.order(created_at: :desc)
+    @categories = Category.order(:name)
   end
 
   # GET /thoughts/1
@@ -88,6 +89,6 @@ class ThoughtsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def thought_params
-      params.require(:thought).permit(:title, :description, :start_date, :end_date, :venue, :location)
+      params.require(:thought).permit(:title, :description, :start_date, :end_date, :venue, :location, :category_id)
     end
 end

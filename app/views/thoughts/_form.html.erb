@@ -10,6 +10,10 @@
     <%= f.text_area :description %>
   </div>
   <div class="field">
+    <%= f.label :category %><br>
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  </div>
+  <div class="field">
     <%= f.label :start_date %><br>
     <%= f.datetime_select :start_date, ampm: true %>
   </div>
