@@ -6,6 +6,8 @@ class Admin::ApplicationController < ApplicationController
   	@thinkers = Thinker.all
   	@thoughts = Thought.all
   	@categories = Category.all
+  	@comments = Comment.all
+  	@attendances = Attendance.all
   end
 
 

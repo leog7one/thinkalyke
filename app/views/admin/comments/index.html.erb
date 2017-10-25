@@ -1,0 +1,9 @@
+<header>
+	<h1>Comments</h1>
+</header>
+
+<% @comments.each do |comment| %>
+<ul class="action">
+	<li>Thought: <%= link_to comment.thought.title, thought_path(comment.thought) %>: <%= comment.body %> By: <%= comment.thinker %> on <%= time_format(comment.created_at) %></li>
+</ul>
+<% end %>

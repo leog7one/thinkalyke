@@ -31,6 +31,22 @@
           <span class="label label-warning pull-right"><%= @categories.count %></span>
         <% end %>
       </li>
+
+      <li>
+        <%= link_to admin_comments_path do %>
+          <%= fa_icon "commenting" %>
+          <span>Comments</span>
+          <span class="label label-warning pull-right"><%= @comments.count %></span>
+        <% end %>
+      </li>
+
+      <li>
+        <%= link_to admin_attendances_path do %>
+          <%= fa_icon "hand-stop-o" %>
+          <span>Attendance</span>
+          <span class="label label-warning pull-right"><%= @attendances.count %></span>
+        <% end %>
+      </li>
 	</div>
 
 	<div class="col-sm-9">

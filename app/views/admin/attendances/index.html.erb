@@ -1,0 +1,9 @@
+<header>
+	<h1>Attendances</h1>
+</header>
+
+<% @attendances.each do |attend| %>
+<ul class="action">
+	<li>Username: <%= attend.thinker %> | <%= link_to attend.attended_thought.title, thought_path(attend.attended_thought) %></li>
+</ul>
+<% end %>

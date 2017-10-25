@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+
   namespace :admin do
     root 'application#index'
     resources :thinkers, only: [:index]
     resources :categories, except: [:show]
+    resources :comments, only: [:index]
+    resources :attendances, only: [:index]
   end
 
   devise_for :thinkers, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
