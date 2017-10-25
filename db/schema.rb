@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025020200) do
+ActiveRecord::Schema.define(version: 20171025030135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "attendances", force: :cascade do |t|
+    t.integer  "thought_id"
+    t.integer  "thinker_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "attendances", ["thinker_id"], name: "index_attendances_on_thinker_id", using: :btree
+  add_index "attendances", ["thought_id"], name: "index_attendances_on_thought_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -72,6 +82,8 @@ ActiveRecord::Schema.define(version: 20171025020200) do
   add_index "thoughts", ["category_id"], name: "index_thoughts_on_category_id", using: :btree
   add_index "thoughts", ["thinker_id"], name: "index_thoughts_on_thinker_id", using: :btree
 
+  add_foreign_key "attendances", "thinkers"
+  add_foreign_key "attendances", "thoughts"
   add_foreign_key "comments", "thinkers"
   add_foreign_key "comments", "thoughts"
   add_foreign_key "thoughts", "thinkers"

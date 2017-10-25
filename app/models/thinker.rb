@@ -6,6 +6,8 @@ class Thinker < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:facebook]
 
   has_many :thoughts, dependent: :destroy
+  has_many :attendances
+  has_many :attended_thoughts, through: :attendances
 
   validates :username, presence:true,length: {minimum: 3}
 

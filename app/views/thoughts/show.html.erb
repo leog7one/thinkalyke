@@ -5,8 +5,14 @@
     <ul class="actions">
       <li><%= link_to "Edit Thought", edit_thought_path(@thought), class: 'edit' %></li>
       <li><%= link_to "Delete Thought", thought_path(@thought), method: :delete, data: {confirm: "Are you sure you want to delete this Thought?"}, class: "delete" %></li>
+       <% end %>
+       <ul class="actions">
+         <% if signed_in? && @thought.thinker != current_thinker %>
+          <li><%= link_to "Register", thought_attendances_path(@thought), method: :post, class: 'new' %></li>
+         <% end %>
+       </ul>
     </ul>
-  <% end %>
+ 
 
 </header>
 
