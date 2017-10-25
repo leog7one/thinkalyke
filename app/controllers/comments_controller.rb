@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
 	def create
 		@thought = Thought.find(params[:thought_id])
 		@comment = @thought.comments.build(comment_params)
+		@comment.thinker = current_thinker
 
 		if @comment.save
 			flash[:notice] = "Comment Created!"

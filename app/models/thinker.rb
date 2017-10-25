@@ -7,6 +7,8 @@ class Thinker < ActiveRecord::Base
 
   has_many :thoughts, dependent: :destroy
 
+  validates :username, presence:true,length: {minimum: 3}
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user| 
       user.email = auth.info.email 
