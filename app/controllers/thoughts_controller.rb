@@ -13,7 +13,8 @@ class ThoughtsController < ApplicationController
   # GET /thoughts/1
   # GET /thoughts/1.json
   def show
-
+    @comment = Comment.new
+    @comment.thought_id = @thought.id
   end
 
   # GET /thoughts/new

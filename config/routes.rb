@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   root 'thoughts#index'
 
  
-  resources :thoughts
+  resources :thoughts do 
+    resources :comments, only: [:create]
+  end
 
   resources :thinkers, only: [:show]
   resources :categories, only: [:show]

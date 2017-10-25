@@ -1,0 +1,14 @@
+<h3>Add Comment</h3>
+
+<%= form_for [@thought, @comment] do |f| %>
+  
+
+  <div class="field">
+   
+    <%= f.text_field :body %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
