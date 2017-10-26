@@ -1,28 +1,36 @@
-== README
+# THINKALYKE
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+THINKALYKE is a web application that allows you to set up meetups with others than are interested in the same things you are. Sometimes you may feel no one understands what you like , but there are always others waiting to talk about what you like as well!
+Great Minds THINKALYKE!
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+To use this on your local system downlaod or clone the repository
 
-* System dependencies
+### Installing
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+After downloading or cloning the repository open a termial at folder the run
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```
+bundle install
+```
+
+then
+
+```
+rails s
+```
+
+You can then open it on your localhost:'PORT#'
+
+## Built With
+
+* Rails
+* Devise
+* Bootstrap
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
