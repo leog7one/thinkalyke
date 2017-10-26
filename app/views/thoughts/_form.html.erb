@@ -22,6 +22,11 @@
     <%= f.datetime_select :end_date, ampm: true %>
   </div>
   <div class="field">
+    <%= f.label :tags %><br>
+    <%= f.text_area :tag_list %>
+  </div>
+   
+  <div class="field">
     <%= f.label :venue %><br>
     <%= f.text_field :venue %>
   </div>

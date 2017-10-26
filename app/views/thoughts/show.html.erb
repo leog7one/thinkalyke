@@ -42,6 +42,20 @@
       <h4 class = "thinker"><%= link_to @thought.thinker, thinker_path(@thought.thinker) %> </h4>
       <p><span class="thought-venue"></span><%= @thought.venue %>, <%= @thought.location %></p>
     </div>
+    
+    <div class="sidebar">
+      <h4>Tags</h4>
+      <% if @thought.tags.any? %>
+        <% @thought.tags.each do |tag|%>
+          <%= link_to tag.name, tag_path(tag) %>
+        <% end %>
+      <% end %>
+    
+    </div>
+    <div class="sidebar">
+       <h4 class="thinker">Thnkers: <span class="pull-right"><%= @thought.thinkers.count %></span></h4>
+    </div>
+
   </div>
 </div>
 
