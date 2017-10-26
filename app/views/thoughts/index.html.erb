@@ -1,15 +1,12 @@
-<div class="container">
-<p id="notice"><%= notice %></p>
-
-<div class="header">
+<header>
   <h1>All Thoughts</h1>
 
-  <% if thinker_signed_in? %>
-    <ul class="actions">
-      <li><%= link_to "New Thought", new_thought_path, class: 'new' %> </li>
-    </ul>
-  <% end %>
-  </div>
+    <% if thinker_signed_in? %>
+      <ul class="actions">
+        <li><%= link_to "New Thought", new_thought_path, class: 'new' %> </li>
+      </ul>
+    <% end %>
+  </header>
 
 
 <div class="row">
@@ -27,7 +24,7 @@
 
 
 
-<h3>Join Others Who Thnkalyke</h3>
+<h3>Join Others Who Thinkalyke</h3>
 <% @thoughts.each do |thought|%>
   <div class="col-sm-9 pull-left">
     <%= link_to thought_path(thought) do  %>
@@ -49,4 +46,4 @@
   </div>
 <% end %>
 </div>
-</div>
+

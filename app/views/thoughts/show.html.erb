@@ -6,11 +6,11 @@
       <li><%= link_to "Edit Thought", edit_thought_path(@thought), class: 'edit' %></li>
       <li><%= link_to "Delete Thought", thought_path(@thought), method: :delete, data: {confirm: "Are you sure you want to delete this Thought?"}, class: "delete" %></li>
        <% end %>
-       <ul class="actions">
-         <% if signed_in? && @thought.thinker != current_thinker %>
-          <li><%= link_to "Register", thought_attendances_path(@thought), method: :post, class: 'new' %></li>
-         <% end %>
-       </ul>
+    </ul>
+    <ul class="actions">
+      <% if signed_in? && @thought.thinker != current_thinker %>
+        <li><%= link_to "Register", thought_attendances_path(@thought), method: :post, class: 'new' %></li>
+      <% end %>  
     </ul>
  
 
@@ -42,20 +42,19 @@
       <h4 class = "thinker"><%= link_to @thought.thinker, thinker_path(@thought.thinker) %> </h4>
       <p><span class="thought-venue"></span><%= @thought.venue %>, <%= @thought.location %></p>
     </div>
-    
+
     <div class="sidebar">
-      <h4>Tags</h4>
+      <h4 class="tags">Tags</h4>
       <% if @thought.tags.any? %>
         <% @thought.tags.each do |tag|%>
-          <%= link_to tag.name, tag_path(tag) %>
+          <span class="tag"><%= fa_icon 'hashtag' %><%= link_to tag.name, tag_path(tag) %></span>
         <% end %>
       <% end %>
     
     </div>
     <div class="sidebar">
-       <h4 class="thinker">Thnkers: <span class="pull-right"><%= @thought.thinkers.count %></span></h4>
+       <h4 class="thinker">Thinkers: <span class="pull-right"><%= @thought.thinkers.count %></span></h4>
     </div>
-
   </div>
 </div>
 

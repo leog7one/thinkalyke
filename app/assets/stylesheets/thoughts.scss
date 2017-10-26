@@ -7,7 +7,7 @@
 
 .thoughts h3.thought-title {
   margin: 0 0 5px 0;
-  color: #e0336b;
+  color: #3c923c;
   font-size: 18px;
   font-weight: 400px;
   line-height: 22px;
@@ -31,6 +31,7 @@
 .thought-start,
 .sidebar .discover,
 .sidebar .thinker,
+.sidebar .tags,
 .thought-end {
 
   &:before {
@@ -71,6 +72,32 @@
   &:before {
     @extend .fa-user;
   }
+}
+
+.sidebar .tags {
+  font-size: 24px;
+
+  &:before {
+    @extend .fa-tag;
+  }
+}
+
+.sidebar h4.tags {
+  margin-bottom: 20px;
+}
+
+.sidebar .tag {
+  font-weight: bold;
+  padding: 5px;
+  background: #3c923c;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar a .tag {
+  color: #fff;
 }
 
 .sidebar a {
