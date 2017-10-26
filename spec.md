@@ -28,7 +28,7 @@ Specs:
 - [X] Include signup (Devise)
 - [X] Include login (Devise)
 - [X] Include logout ( Devise)
-- [X] Include third party signup/login ( Devise/OmniAuth)
+- [X] Include third party signup/login (Devise/OmniAuth :facebook)
 - [X] Include nested resource show or index 
 - [X] Include nested resource "new" form 
 	resources :thoughts do 
