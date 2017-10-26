@@ -18,8 +18,9 @@
 @import "font-awesome";
 @import "thoughts";
 @import "admin/application";
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 @import "home";
+@import "devise_styles";
 
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
@@ -60,7 +61,7 @@ background-color: #030033;
 }
 
 body {
-  font-family: 'PT Sans Narrow', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   font-size: 14px;
   color: #333;
   padding-top: 70px;
@@ -161,17 +162,42 @@ span.past {
   @extend .alert-danger;
 }
 
+.field {
+  padding-bottom: 5px;
+}
+
+element.style {
+  color: white;
+  font-size: 1.2em;
+}
+
+.devise-links {
+  padding-top: 8px;
+}
+
+.devise-links a {
+  color: white;
+  font-size: 1.2em;
+}
+
+input[type=file] {
+    margin: 0 auto;
+}
+
+
+
 
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
-  background: #fff;
+  background: #3c923c;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top: 10px;
   margin-botttom: 15px;
   padding: 20px;
+  text-align: center;
 }
 
 

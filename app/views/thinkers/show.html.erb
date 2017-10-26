@@ -1,5 +1,11 @@
 <header>
 	<h1><%= @thinker.username %>'s Thoughts </h1>
+
+    <% if @thinker == current_thinker %>
+      <ul class="actions">
+        <li><%= link_to "New Thought", new_thought_path, class: 'new' %> </li>
+      </ul>
+    <% end %>
 </header>
 
 <h3>Thought's Created</h3>
