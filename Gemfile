@@ -37,6 +37,8 @@ gem 'omniauth', '~> 1.7', '>= 1.7.1'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
+gem 'carrierwave', '~> 1.2', '>= 1.2.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

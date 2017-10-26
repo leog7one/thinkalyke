@@ -14,6 +14,8 @@ class Thought < ActiveRecord::Base
 	validates :venue, presence: true
 	validates :location, presence: true
 
+	mount_uploader :image, ImageUploader
+
 	def tag_list=(names)
 		tag_names = names.split(",").collect {|string| string.strip.downcase}.uniq
 		new_or_existing_tags = tag_names.collect {|tag_name| Tag.find_or_create_by(name: tag_name)}
