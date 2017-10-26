@@ -16,6 +16,10 @@ class Thought < ActiveRecord::Base
 
 	mount_uploader :image, ImageUploader
 
+	def self.random_thought
+		limit(4).order("RANDOM()")
+	end
+
 	def tag_list=(names)
 		tag_names = names.split(",").collect {|string| string.strip.downcase}.uniq
 		new_or_existing_tags = tag_names.collect {|tag_name| Tag.find_or_create_by(name: tag_name)}
