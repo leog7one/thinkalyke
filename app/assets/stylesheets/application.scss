@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_self
+ *= require bootstrap-social
  */
 
 @import "bootstrap-sprockets";
@@ -20,6 +21,7 @@
 @import "admin/application";
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 @import "home";
+
 
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
@@ -172,6 +174,7 @@ element.style {
 
 .devise-links {
   padding-top: 8px;
+  text-align: -webkit-center;
 }
 
 .devise-links a {
@@ -183,7 +186,10 @@ input[type=file] {
     margin: 0 auto;
 }
 
-
+.btn-block {
+    display: block;
+    width: 50%;
+}
 
 
 .booyah-box {
@@ -198,5 +204,49 @@ input[type=file] {
   padding: 20px;
   text-align: center;
 }
+
+/* xs < 768 */
+@media screen and (max-width: 767px) {
+    body {
+        font-size: 1.3em;
+    }
+    span.title {
+      font-size: 3.0em
+    }
+}
+
+/* sm */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 1.5em;
+    }
+    span.title {
+      font-size: 5.5em
+    }
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+    body {
+        font-size: 1.2em;
+    }
+    span.title {
+      font-size: 7.0em
+    }
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 1.3em;
+    }
+    span.title {
+      font-size: 7.0em
+    }
+}
+
+
+
+
 
 

@@ -43,6 +43,8 @@
 <p><%= @thinker.username %> has no thoughts created.</p>
 <% end %>
 
+<% if @thought.thinker == current_thinker || (current_thinker && current_thinker.admin?) %>
+
 <h3>Thought's Attending</h3>
 
 <% if @thinker.attended_thoughts.any? %>
@@ -76,4 +78,5 @@
 </table>
 <% else %>
 <p><%= @thinker.username %> has no attending thoughts.</p>
+<% end %>
 <% end %>
