@@ -38,6 +38,7 @@ gem 'omniauth-facebook', '~> 4.0'
 gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 
 gem 'carrierwave', '~> 1.2', '>= 1.2.1'
+gem 'mini_magick', '~> 4.8'
 
 gem 'bootstrap-social-rails'
 

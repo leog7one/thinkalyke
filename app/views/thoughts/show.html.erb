@@ -18,7 +18,7 @@
 
 <div class="row">
   <div class="col-sm-9">
-    <%= image_tag @thought.image, class: "thought-image" %>
+    <%= image_tag @thought.image.large, class: "thought-image" %>
     
     <div class="thought-meta">
       <h4><strong>Start date: </strong><%= time_format(@thought.start_date) %></h4>

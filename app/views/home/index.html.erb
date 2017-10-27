@@ -16,7 +16,7 @@
 		<% @thoughts.random_thought.each do |thought| %>
 		<div class="col-sm-3">
 			<h3><%= link_to thought.title, thought_path(thought) %></h3>
-			<%= image_tag thought.image, class: 'img-responsive center-block' %>
+			<%= image_tag thought.image.thumb, class: 'img-responsive center-block' %>
 		</div>
 		<% end %>
 </div>
