@@ -24,17 +24,21 @@
       <h4><strong>Start date:</strong><%= time_format(@thought.start_date) %></h4>
       <p><strong>End date:</strong><%= time_format(@thought.end_date) %></p>
     </div>
+
     <div class="thought-details">
       <h3>Thought Details</h3>
       <p><%= @thought.description %></p>
     </div>
+
     <h3>Comments</h3>
-    <% if @thought.comments.any? %>
-      <%= render @thought.comments %>
+      <% if @thought.comments.any? %>
+        <%= render @thought.comments %>
       <% else %>
         There are no comments for this Thought
       <% end %>
-    <%= render 'comments/form', thought: @thought, comment: @comment %>
+      <% if signed_in? %>
+        <%= render 'comments/form', thought: @thought, comment: @comment %>
+      <% end %>
   </div>
 
   <div class="col-sm-3">

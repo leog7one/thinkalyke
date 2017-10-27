@@ -205,45 +205,7 @@ input[type=file] {
   text-align: center;
 }
 
-/* xs < 768 */
-@media screen and (max-width: 767px) {
-    body {
-        font-size: 1.3em;
-    }
-    span.title {
-      font-size: 3.0em
-    }
-}
 
-/* sm */
-@media screen and (min-width: 768px) {
-    body {
-        font-size: 1.5em;
-    }
-    span.title {
-      font-size: 5.5em
-    }
-}
-
-/* md */
-@media screen and (min-width: 992px) {
-    body {
-        font-size: 1.2em;
-    }
-    span.title {
-      font-size: 7.0em
-    }
-}
-
-/* lg */
-@media screen and (min-width: 1200px) {
-    body {
-        font-size: 1.3em;
-    }
-    span.title {
-      font-size: 7.0em
-    }
-}
 
 
 
