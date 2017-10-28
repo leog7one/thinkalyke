@@ -18,7 +18,9 @@ Rails.application.routes.draw do
     resources :attendances, only: [:create, :destroy]
   end
 
-  resources :thinkers, only: [:show]
+  resources :thinkers, only: [:show] do
+    resources :comments, only: [:show]
+  end
   resources :categories, only: [:show]
   resources :tags, only: [:show]
 

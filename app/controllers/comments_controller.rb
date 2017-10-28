@@ -15,6 +15,11 @@ class CommentsController < ApplicationController
 		end
 	end
 
+	def show
+		@thinker = Thinker.find(params[:thinker_id])
+		@comments = @thinker.comments
+	end
+
 	def comment_params
 		params.require(:comment).permit(:body)
 	end

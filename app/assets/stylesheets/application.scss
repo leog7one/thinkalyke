@@ -91,7 +91,8 @@ ul.actions {
   text-align: right;
 }
 
-a.new, 
+a.new,
+a.comment, 
 a.edit,
 a.delete {
 	@extend .btn;
@@ -108,6 +109,14 @@ a.new {
 	&:before {
 		@extend .fa-plus;
 	}
+}
+
+a.comment {
+  @extend .btn-success;
+
+  &:before {
+    @extend .fa-comment;
+  }
 }
 
 a.edit {

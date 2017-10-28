@@ -8,6 +8,7 @@ class Thinker < ActiveRecord::Base
   has_many :thoughts, dependent: :destroy
   has_many :attendances
   has_many :attended_thoughts, through: :attendances
+  has_many :comments
 
   validates :username, presence:true,length: {minimum: 3}
 

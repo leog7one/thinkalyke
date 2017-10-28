@@ -4,6 +4,7 @@
     <% if @thinker == current_thinker %>
       <ul class="actions">
         <li><%= link_to "New Thought", new_thought_path, class: 'new' %> </li>
+        <li><%= link_to "My Comments", thinker_comment_path(@thinker, @comments), class: 'comment' %> </li>
       </ul>
     <% end %>
 </header>
