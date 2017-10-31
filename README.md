@@ -48,7 +48,7 @@ You can Update or Delete your Thinkalyke Thinker account via the "My Info" page
 
 While creating a "Thought" you can place tags as to link to similar "Thoughts" in Thinkalyke.
 
-Clicking on a Tag in the "Thought" show page will then link you too other "Thoughts with the same tags"
+Clicking on a Tag in the "Thought" show page will then link you to other "Thoughts with the same tags"
 
 
 
