@@ -1,6 +1,6 @@
 # THINKALYKE
 
-THINKALYKE is a web application that allows you to set up meetups with others than are interested in the same things you are. Sometimes you may feel no one understands what you like , but there are always others waiting to talk about what you like as well!
+THINKALYKE is a web application that allows you to set up meetups with others that are interested in the same things you are. Sometimes you may feel no one understands what you, but there are always others waiting to talk about what you like as well!
 Great Minds THINKALYKE!
 
 ## Getting Started
