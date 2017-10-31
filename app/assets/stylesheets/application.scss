@@ -91,6 +91,14 @@ ul.actions {
   text-align: right;
 }
 
+ul.error {
+  @extend .list-unstyled;
+  @extend .list-inline;
+  bottom: -2px;
+  right: 2px;
+  text-align: center;
+}
+
 a.new,
 a.comment, 
 a.edit,

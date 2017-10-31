@@ -3,74 +3,62 @@ class ThoughtsController < ApplicationController
   before_action :authenticate_thinker!, except: [:index, :show]
   before_action :authorize_owner, only: [:edit, :update, :destroy]
 
-  # GET /thoughts
-  # GET /thoughts.json
+
   def index
     @thoughts = Thought.order(created_at: :desc)
     @categories = Category.order(:name)
   end
 
-  # GET /thoughts/1
-  # GET /thoughts/1.json
+
   def show
     @comment = Comment.new
     @comment.thought_id = @thought.id
   end
 
-  # GET /thoughts/new
+
   def new
     @thought = Thought.new
   end
 
-  # GET /thoughts/1/edit
+
   def edit
   end
 
-  # POST /thoughts
-  # POST /thoughts.json
   def create
     @thought = Thought.new(thought_params)
     @thought.thinker = current_thinker
 
-    respond_to do |format|
       if @thought.save
-        format.html { redirect_to @thought, notice: 'Thought was successfully created.' }
-        format.json { render :show, status: :created, location: @thought }
-      else
-        format.html { render :new }
-        format.json { render json: @thought.errors, status: :unprocessable_entity }
+        flash[:notice] = "Thought Created!"
+      redirect_to thought_path(@thought)
+    else
+      flash.now[:alert] = "Thought Not Created!"
+      render :new
       end
-    end
   end
 
-  # PATCH/PUT /thoughts/1
-  # PATCH/PUT /thoughts/1.json
+
   def update
-    respond_to do |format|
       if @thought.update(thought_params)
-        format.html { redirect_to @thought, notice: 'Thought was successfully updated.' }
-        format.json { render :show, status: :ok, location: @thought }
+        flash[:notice] = 'Thought was successfully updated.'
+        redirect_to thought_path(@thought)
       else
-        format.html { render :edit }
-        format.json { render json: @thought.errors, status: :unprocessable_entity }
-      end
+        flash.now[:alert] = "Thought Not Updated!"
+      render :edit
     end
   end
 
-  # DELETE /thoughts/1
-  # DELETE /thoughts/1.json
+
   def destroy
     @thought.destroy
-    respond_to do |format|
-      format.html { redirect_to thoughts_url, notice: 'Thought was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+      flash[:alert] = "Thought has been deleted"
+      redirect_to thoughts_path
   end
 
   private
 
 
-    # Use callbacks to share common setup or constraints between actions.
+
     def set_thought
       @thought = Thought.find(params[:id])
 
@@ -88,7 +76,7 @@ class ThoughtsController < ApplicationController
       end
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+
     def thought_params
       params.require(:thought).permit(:title, :description, :start_date, :end_date, :venue, :location, :category_id, :tag_list, :image)
     end
