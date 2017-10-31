@@ -26,7 +26,7 @@ You can then open it on your localhost:'PORT#'
 
 ### Usage
 
-You do not need a Thynkalyke Thinker account to view all "Thoughts". You can access them from the home page by clicking on "View All Thoughts" button
+You do not need a Thinkalyke Thinker account to view all "Thoughts". You can access them from the home page by clicking on "View All Thoughts" button
 
 To sign up to a "Thought" or create your own "Thoughts": Create a Thinkalyke Thinker account by clickin on 'sign up' or 'sign in with Facebook'
 
