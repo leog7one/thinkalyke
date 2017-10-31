@@ -40,7 +40,7 @@ You can delete or edit "Thoughts" you created via the "My Thoughts" page or the 
 
 You can unregister from a "Thought" in the "My Thoughts" page
 
-You must be signed in to leave comments for a Thought
+You must be signed in to leave comments for a "Thought"
 
 You can view all the comments you had made by clicking on the "My Comments" button, in the "My Thoughts" page.
 
@@ -48,7 +48,7 @@ You can Update or Delete your Thinkalyke Thinker account via the "My Info" page
 
 While creating a "Thought" you can place tags as to link to similar "Thoughts" in Thinkalyke.
 
-Clicking on a Tag in the "Thought" show page will then link you to other "Thoughts with the same tags"
+Clicking on a Tag in the "Thought" show page will then link you to other "Thoughts" with the same tags
 
 
 
