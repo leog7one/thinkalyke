@@ -8,7 +8,10 @@ Rails.application.routes.draw do
     resources :attendances, only: [:index]
   end
 
-  devise_for :thinkers, controllers: {omniauth_callbacks: 'users/omniauth_callbacks'}
+  devise_for :thinkers, controllers: {omniauth_callbacks: 'users/omniauth_callbacks', registrations: 'users/registrations'}
+
+ 
+
   
   root 'home#index'
 
