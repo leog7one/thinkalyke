@@ -5,7 +5,7 @@ class ThoughtsController < ApplicationController
 
 
   def index
-    @thoughts = Thought.order(created_at: :desc)
+    @thoughts = Thought.order(created_at: :desc).paginate(page: params[:page], :per_page => 7)
     @categories = Category.order(:name)
   end
 
