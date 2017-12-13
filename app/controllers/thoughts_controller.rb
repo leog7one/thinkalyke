@@ -13,6 +13,10 @@ class ThoughtsController < ApplicationController
   def show
     @comment = Comment.new
     @comment.thought_id = @thought.id
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @thought}
+    end
   end
 
 

@@ -44,6 +44,7 @@ gem 'bootstrap-social-rails'
 
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
+gem 'active_model_serializers'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
