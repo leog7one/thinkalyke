@@ -32,7 +32,7 @@
 
     <h3>Comments</h3>
       <% if @thought.comments.any? %>
-        <%= render @thought.comments %>
+        <%= render 'comments/comment' %>
       <% else %>
         There are no comments for this Thought
       <% end %>
